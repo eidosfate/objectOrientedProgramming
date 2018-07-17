@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
-
 #include <process.h>
 
+/*Prototype Declaration*/
 int Fibbonaci(int n);
 int Factorial(int n);
 int Table(int n);
@@ -15,15 +15,15 @@ void main()
 {
   int n;
   char ch;
-
+  /*Do While Loop to repeat until value = 7 */
   do{
-    system("cls");
+    system("cls"); /* As clrscr doenst work using Win32 Engine... I tried */
   printf(" 1. Fibbonaci \n 2.Factorial \n 3. Table \n 4. Check for Prime \n 5.Check for Even/Odd \n 6. Check for Armstrong No. \n 7. Exit");
   printf(" \n\t Make your Choice:");
   scanf("%s",&ch);
   printf("Enter the Number:");
   scanf("%d",&n);
-
+  /*Switch Begins here*/
   switch(ch)
   {case '1' : Fibbonaci(n);
                             break;
@@ -42,7 +42,7 @@ void main()
 }while(ch !='7');
   getch();
 }
-
+/* Other functions based on the choice */
 int Fibbonaci(int n)
 {int first = 0, second = 1, next, c;
   printf("First %d terms of Fibonacci series are:\n", n);
