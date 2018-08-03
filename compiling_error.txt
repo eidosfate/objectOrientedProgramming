@@ -1,0 +1,24 @@
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp: In function 'int swap(xyz&, abc&)':
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:41:21: error: ambiguating new declaration of 'int swap(xyz&, abc&)'
+ int swap(xyz&x,abc&b)
+                     ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:19:15: note: old declaration 'void swap(xyz&, abc&)'
+   friend void swap(xyz&, abc&);
+               ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:43:4: error: cannot convert 'xyz' to 'int' in assignment
+   t=x;
+    ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:44:4: error: no match for 'operator=' (operand types are 'xyz' and 'abc')
+   x=b;
+    ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:6:7: note: candidate: xyz& xyz::operator=(const xyz&)
+ class xyz
+       ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:6:7: note:   no known conversion for argument 1 from 'abc' to 'const xyz&'
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:45:4: error: no match for 'operator=' (operand types are 'abc' and 'int')
+   b=t;
+    ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:14:7: note: candidate: abc& abc::operator=(const abc&)
+ class abc
+       ^
+D:\Programming\objectOrientedProgramming\StudentFriend.cpp:14:7: note:   no known conversion for argument 1 from 'int' to 'const abc&'
